@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlternateIcon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvb-SC-N8j">
+                                <rect key="frame" x="160.5" y="238.5" width="54" height="30"/>
+                                <state key="normal" title="Pikachu"/>
+                                <connections>
+                                    <action selector="pikachuButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p40-5r-vMq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ni2-cy-1Dn">
+                                <rect key="frame" x="164" y="398.5" width="47" height="30"/>
+                                <state key="normal" title="Raichu"/>
+                                <connections>
+                                    <action selector="raichuButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fJ-pd-Ckx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kc3-yk-HqM">
+                                <rect key="frame" x="168" y="318.5" width="39" height="30"/>
+                                <state key="normal" title="Pichu"/>
+                                <connections>
+                                    <action selector="pichuButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jO1-zZ-x2P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zvb-SC-N8j" firstAttribute="bottom" secondItem="kc3-yk-HqM" secondAttribute="top" constant="-50" id="24y-TL-sln"/>
+                            <constraint firstItem="Ni2-cy-1Dn" firstAttribute="centerX" secondItem="kc3-yk-HqM" secondAttribute="centerX" id="KNB-5l-MS8"/>
+                            <constraint firstItem="kc3-yk-HqM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O26-D6-t27"/>
+                            <constraint firstItem="zvb-SC-N8j" firstAttribute="centerX" secondItem="kc3-yk-HqM" secondAttribute="centerX" id="WXi-u6-3fU"/>
+                            <constraint firstItem="Ni2-cy-1Dn" firstAttribute="top" secondItem="kc3-yk-HqM" secondAttribute="bottom" constant="50" id="iX7-81-5ZA"/>
+                            <constraint firstItem="kc3-yk-HqM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iXq-Ig-Ts8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
