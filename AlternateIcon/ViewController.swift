@@ -9,42 +9,30 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+    enum AppIconName: String {
+        case pikachu
+        case pichu
+        case raichu
     }
     
-    // change app icon to "pikachu"
     @IBAction func pikachuButtonDidTap(_ sender: UIButton) {
-        changeIcon(to: "pikachu")
+        changeIcon(to: .pikachu)
     }
     
-    // change app icon to "pichu"
     @IBAction func pichuButtonDidTap(_ sender: UIButton) {
-        changeIcon(to: "pichu")
+        changeIcon(to: .pichu)
     }
     
-    // change app icon to "raichu"
     @IBAction func raichuButtonDidTap(_ sender: UIButton) {
-        changeIcon(to: "raichu")
+        changeIcon(to: .raichu)
     }
     
-    func changeIcon(to iconName: String) {
-        // 1
+    func changeIcon(to iconName: AppIconName) {
         guard UIApplication.shared.supportsAlternateIcons else { return }
-                
-        // 2
-        UIApplication.shared.setAlternateIconName(iconName, completionHandler: { (error) in
-            // 3
-            if let error = error {
-                print("App icon failed to change due to \(error.localizedDescription)")
-            } else {
-                print("App icon changed successfully")
-            }
-        })
+        UIApplication.shared.setAlternateIconName(iconName.rawValue)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
-
 }
 
